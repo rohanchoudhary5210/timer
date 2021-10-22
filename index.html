@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .navbar{
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+            background: #000;
+            color: wheat;
+            height: 8vh;
+            align-items: center;
+        }
+        .navbar ul{
+            display: flex;
+            list-style-type: none;
+            width: 50%;
+            justify-content: space-evenly;
+        }
+        .container{
+            background-color:rgb(172, 147, 109);
+            color: black;
+            padding: 12px;
+            margin: 23px auto;
+            width: 70%;
+            height: 75vh;
+            font-family: sans-serif;
+            line-height: 30px;
+            font-size: 18px;
+            border-radius: 12px;
+        }
+        .container .viewtime{
+            margin: 20px;
+            border-bottom: 1px solid black;
+        }
+        #tc{
+            height: 40px;
+            border-radius: 2px 8px;
+            padding: 8px;
+            font-size: 17px;   
+        }
+        .data{
+            display: block;
+           width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li>Home</li>
+            <li>Home</li>
+            <li>Home</li>
+            <li>Home</li>
+        </ul>
+        <div class="searchbox">
+            <input type="search" name="" id="">
+            <button>Search</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="viewtime">
+            <h2>CURRENT TIME IS: <span id="time"></span></h2>
+        </div>
+        <div class="dat">
+            <p>Hello everyone, Rohan here , this is my first project with javascript i hope that every will like it. 
+            </p>
+            <button id="tc" type="submit">Browse Times</button>
+            <div class="data">
+                <p>Hello everyone, Rohan here , this is my first project with javascript i hope that every will like it. 
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+    let a;
+let raw;
+let time;
+setInterval(() => {
+    a = new Date();
+    raw = a.toLocaleString();
+    document.getElementById('time').innerHTML=raw;
+}, 1000);
+tc.addEventListener('mouseover', function(){
+    document.querySelectorAll('.data')[0].style.display ='inline';
+    })
+tc.addEventListener('mouseout', function(){
+    document.querySelectorAll('.data')[0].style.display ='none';
+    })
+
+    </script>
+</body>
+</html>
